@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://root:root@cluster0.lodlqbq.mongodb.net/CRUD', {
+mongoose.connect('mongodb+srv://root:root@cluster0.lodlqbq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     // useNewUrlParser: true,
     // useUnifiedTopology: true
 }).then(() => {

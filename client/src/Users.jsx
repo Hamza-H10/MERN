@@ -6,7 +6,7 @@ function Users() {
     const [users, setUsers] = useState([])
 
     useEffect(() =>{
-        axios.get('https://mern-backend-three-rust.vercel.app/')
+        axios.get('https://mern-backend-three-rust.vercel.app')
         .then(result=>setUsers(result.data))
         .catch(err => console.log(err))
 

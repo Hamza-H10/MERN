@@ -6,14 +6,14 @@ function Users() {
     const [users, setUsers] = useState([])
 
     useEffect(() =>{
-        axios.get('http://localhost:3001')
+        axios.get('https://mern-backend-three-rust.vercel.app/')
         .then(result=>setUsers(result.data))
         .catch(err => console.log(err))
 
     },[])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3001/deleteUser/'+id)
+        axios.delete('https://mern-backend-three-rust.vercel.app/deleteUser/'+id)
         .then(res => {console.log(res)
             window.location.reload()})
         .catch(errr => console.log(errr))

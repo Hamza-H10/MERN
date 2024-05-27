@@ -10,7 +10,7 @@ function UpdateUser() {
   const navigate = useNavigate()
 
   useEffect(() =>{
-    axios.get('http://localhost:3001/getUser/' + id)
+    axios.get('https://mern-backend-three-rust.vercel.app/getUser/' + id)
     .then(result=>{console.log(result)
       setName(result.data.name)
       setEmail(result.data.email)
@@ -22,7 +22,7 @@ function UpdateUser() {
 
 const Update = (e) => {
   e.preventDefault();
-  axios.put("http://localhost:3001/UpdateUser/"+id, {name, email, age})//instead of post we will use put because we are updating 
+  axios.put("https://mern-backend-three-rust.vercel.app/UpdateUser/"+id, {name, email, age})//instead of post we will use put because we are updating 
   .then(result => {console.log(result)
     navigate('/')
 })
